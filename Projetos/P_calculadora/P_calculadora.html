@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+  <head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hermes Andrade" />
+    <meta name="description" content="sobre mim e lista de projetos" />
+    <link href="css/css.css" rel="stylesheet" />
+  </head>
+  <body>
+    <noscript>
+      <h1>Esta página requer JavaScript para funcionar corretamente</h1>
+    </noscript>
+    <!-- <h1>Calculadora Básica</h1> -->
+    <a href="../../index.html" class="voltar"><b>&lt; Voltar</b></a>
+    <div id="pai">
+      <input type="text" class="entrada" placeholder="0" />
+      <button id="btnColuna1" class="um" onclick="insert('1')">1</button>
+      <button class="dois" onclick="insert('2')">2</button>
+      <button class="tres" onclick="insert('3')">3</button>
+      <button id="btnColuna1" class="quatro" onclick="insert('4')">4</button>
+      <button class="cinco" onclick="insert('5')">5</button>
+      <button class="seis" onclick="insert('6')">6</button>
+      <button id="btnColuna1" class="sete" onclick="insert('7')">7</button>
+      <button class="oito" onclick="insert('8')">8</button>
+      <button class="nove" onclick="insert('9')">9</button>
+      <button class="zero" onclick="insert('0')">0</button>
+      <button class="mais" onclick="insert('+')">+</button>
+      <button class="menos" onclick="insert('-')">-</button>
+      <button class="x" onclick="insert('*')">x</button>
+      <button class="barra" onclick="insert('/')">/</button>
+      <button class="porcentagem" onclick="insert('%')">%</button>
+      <button class="ponto" onclick="insert('.')">.</button>
+      <button class="igual" onclick="calcular()">=</button>
+      <button id="btnColuna1" class="AC" onclick="AC()">AC</button>
+    </div>
+    <script src="js/js.js"></script>
+  </body>
+</html>

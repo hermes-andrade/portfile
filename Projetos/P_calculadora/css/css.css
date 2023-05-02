@@ -1,0 +1,170 @@
+body {
+  background-image: url(imgFundo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 650px;
+  font-family: sans-serif;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+@media only screen and (max-width: 480px) {
+  body {
+    height: 850px;
+  }
+}
+h1 {
+  text-align: center;
+  color: black;
+  background-color: red;
+  margin: 0 -10px;
+  font-size: 40px;
+  -webkit-text-stroke: 1px white;
+}
+.voltar {
+  display: inline-block;
+  text-align: left;
+  color: black;
+  background-color: rgb(103, 125, 221);
+  border: 5px rgb(172, 198, 236) solid;
+  border-left: none;
+  padding: 10px;
+  margin-left: -10px;
+  border-radius: 0px 15px 15px 0;
+  font-size: 15px;
+  text-decoration: none;
+}
+.voltar:hover {
+  background-color: rgb(116, 137, 226);
+}
+@keyframes cresce {
+  0% {
+    transform: translate(-55%, -50%);
+  }
+  100% {
+    transform: translate(-55%, -48%);
+  }
+}
+#pai {
+  animation: cresce 1s infinite ease-in-out alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  display: grid;
+  width: 350px;
+  background: rgb(85, 120, 165);
+  margin: 20px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  grid-template-columns: repeat(4);
+  grid-template-rows: 50px 70px;
+  grid-template-areas:
+    "entrada entrada entrada entrada"
+    "AC      porcen  mult    barra"
+    "sete    oito    nove    igual"
+    "quatro  cinco   seis    menos"
+    "um      dois    tres    mais"
+    "zero    zero    ponto   mais";
+}
+button {
+  padding: 20px;
+  margin: 5px;
+  font-size: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.2px rgb(172, 198, 236);
+}
+.entrada {
+  grid-area: entrada;
+  text-align: right;
+  font-size: 20px;
+  background: linear-gradient(to bottom, #ccc, #eee);
+  border-radius: 4px;
+  margin: -10px 0 10px;
+}
+.entrada:hover {
+  background: #eee;
+}
+.entrada::placeholder {
+  color: black;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+.AC {
+  grid-area: AC;
+}
+.porcentagem {
+  grid-area: porcen;
+}
+.x {
+  grid-area: mult;
+}
+.barra {
+  grid-area: barra;
+}
+.sete {
+  grid-area: sete;
+}
+.oito {
+  grid-area: oito;
+}
+.nove {
+  grid-area: nove;
+}
+.igual {
+  grid-area: igual;
+  background: rgb(134, 161, 201);
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.igual:hover {
+  background: rgb(119, 149, 196);
+}
+.quatro {
+  grid-area: quatro;
+}
+.cinco {
+  grid-area: cinco;
+}
+.seis {
+  grid-area: seis;
+}
+.menos {
+  grid-area: menos;
+}
+.um {
+  grid-area: um;
+}
+.dois {
+  grid-area: dois;
+}
+.tres {
+  grid-area: tres;
+}
+.mais {
+  grid-area: mais;
+  background: rgb(134, 161, 201);
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.mais:hover {
+  background: rgb(119, 149, 196);
+}
+.ponto {
+  grid-area: ponto;
+}
+.zero {
+  grid-area: zero;
+  background: rgb(134, 161, 201);
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.zero:hover {
+  background: rgb(119, 149, 196);
+}
+#btnColuna1 {
+  padding-right: 10px;
+}
