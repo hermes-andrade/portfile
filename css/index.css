@@ -100,11 +100,18 @@ body a {
   .nav-header ul {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     padding: 10px;
     z-index: -1;
-    background-color: rgba(58, 57, 57, 0.514);
-    background-image: none;
+    background-image: linear-gradient(
+      to right,
+      black,
+      rgba(0, 0, 0, 0.725),
+      transparent
+    );
+  }
+  .nav-header ul:hover {
+    background-color: transparent;
   }
 
   .nav-header li {
@@ -114,11 +121,17 @@ body a {
   .header__btnMenu {
     display: inline-block;
     margin-top: -30px;
-    padding: 30px 0 0px 30px;
+    padding: 10px 0 0px 30px;
     width: 100%;
     text-align: left;
     border: none;
-    background-color: rgba(58, 57, 57, 0.514);
+    background-color: transparent;
+    background-image: linear-gradient(
+      to right,
+      black,
+      rgba(0, 0, 0, 0.725),
+      transparent
+    );
     font-size: 18px;
   }
 }
@@ -128,6 +141,7 @@ body a {
   display: flex;
   align-items: center;
   margin-top: 50px;
+  overflow-x: hidden;
 }
 #introduction-title {
   text-align: left;
@@ -153,6 +167,22 @@ body a {
   border-radius: 50%;
   margin: 200px -100px 100px 250px;
 }
+@media (min-width: 769px) and (max-width: 1190px) {
+  #introduction {
+    flex-direction: column;
+  }
+
+  #introduction-title {
+    margin: 20px 200px 400px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #foto-perfil {
+    width: 400px;
+    margin: 100px auto 0 auto;
+  }
+}
 @media only screen and (max-width: 768px) {
   #introduction {
     flex-direction: column;
@@ -160,7 +190,7 @@ body a {
   }
 
   #introduction-title {
-    margin: 50px 20px 125px 20px;
+    margin: 10px 20px 125px 20px;
     font-size: 30px;
     text-align: left;
     float: none;
@@ -168,7 +198,7 @@ body a {
 
   #foto-perfil {
     width: 200px;
-    margin: 320px auto 0;
+    margin: 200px auto 0;
   }
 }
 
@@ -192,13 +222,13 @@ body a {
 }
 @media only screen and (max-width: 768px) {
   #section-sobre-mim {
-    margin: 50px;
+    margin: 50px 10px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   #section-sobre-mim {
-    margin: 30px;
+    margin: 30px 5px;
   }
   #section-sobre-mim h2 {
     font-size: 24px;
@@ -277,7 +307,12 @@ body a {
   background-color: rgba(238, 238, 237, 0.613);
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1190px) {
+  .section-projetos-habilidades {
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 1190px) {
   .ul-projetos {
     display: flex;
     flex-wrap: wrap;
@@ -297,12 +332,12 @@ body a {
   .section-projetos-habilidades img {
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 200px;
   }
 
   .section-projetos-habilidades h3 {
     margin: 15px 0 0;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .descricao {
